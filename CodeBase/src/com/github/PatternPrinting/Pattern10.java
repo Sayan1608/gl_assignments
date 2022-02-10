@@ -9,7 +9,8 @@ public class Pattern10 {
 		System.out.print("Enter the height of the pattern::");
 		int height = in.nextInt();
 		System.out.println("\n");
-		pattern10(height);
+//		pattern10(height);
+		invertedPattern10(height);
 		in.close();
 	}
 
@@ -24,6 +25,23 @@ public class Pattern10 {
 				System.out.print(" ");
 			}
 			if (i > 1) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void invertedPattern10(int h) {
+		for (int i = 1; i <= h; i++) {
+			for (int k = 1; k < i; k++) {
+				System.out.print(" ");
+			}
+			System.out.print("*");
+
+			if (i < h) {
+				for (int j = (2 * (h - i) - 1); j >= 1; j--) {
+					System.out.print(" ");
+				}
 				System.out.print("*");
 			}
 			System.out.println();
