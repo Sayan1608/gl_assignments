@@ -6,4 +6,10 @@ public class PrintArray {
 			System.out.print(i + " ");
 		}
 	}
+	
+	public static void printArray(String[] a) {
+		for (String i : a) {
+			System.out.print(i + " ");
+		}
+	}
 }

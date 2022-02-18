@@ -7,4 +7,10 @@ public class SwapArrayElements {
 		a[i] = a[j];
 		a[j] = temp;
 	}
+	
+	public static void swap(String[]a, int i, int j) {
+		String temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+	}
 }
