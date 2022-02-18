@@ -38,10 +38,7 @@ public class SelectionSort {
 		default:
 			System.out.println("Wrong Choice!");
 		}
-		
-
-		
-
+		in.close();
 	}
 
 	/*
