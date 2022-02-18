@@ -1,15 +1,11 @@
 package com.github.DataStructures.Arrays.Sorting;
 
-import java.util.Scanner;
-
 import com.github.Arrays.InputArray;
 import com.github.Arrays.PrintArray;
 import com.github.Arrays.SwapArrayElements;
 
 public class BubbleSort {
 
-	private static Scanner in = new Scanner(System.in);
-	private static int[] a;
 
 	public static void main(String[] args) {
 		int[] a = InputArray.input();
