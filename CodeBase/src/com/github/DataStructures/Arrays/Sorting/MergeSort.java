@@ -6,14 +6,14 @@ import com.github.Arrays.PrintArray;
 public class MergeSort {
 	static int[] a = InputArray.input();
 	static int[] temp = new int[a.length];
-	
 
 	public static void main(String[] args) {
 		System.out.print("Array before Sorting::");
 		PrintArray.printArray(a);
 		System.out.print("\nArray after Sorting::");
-		mergeSort(0,a.length - 1);
+		mergeSort(0, a.length - 1);
 		PrintArray.printArray(a);
+
 	}
 
 	public static void mergeSort(int l, int r) {
@@ -29,7 +29,6 @@ public class MergeSort {
 		int i = l;
 		int j = mid + 1;
 		int k = l;
-		
 
 		while (i <= mid && j <= r) {
 			if (a[i] >= a[j]) {
