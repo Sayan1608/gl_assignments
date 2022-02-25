@@ -12,20 +12,20 @@ public class MergeSort {
 		System.out.print("Array before Sorting::");
 		PrintArray.printArray(a);
 		System.out.print("\nArray after Sorting::");
-		mergeSort(a, 0, a.length - 1);
+		mergeSort(0,a.length - 1);
 		PrintArray.printArray(a);
 	}
 
-	public static void mergeSort(int[] a, int l, int r) {
+	public static void mergeSort(int l, int r) {
 		if (l < r) {
 			int mid = (l + r) / 2;
-			mergeSort(a, l, mid);
-			mergeSort(a, mid + 1, r);
-			merge(a, l, mid, r);
+			mergeSort(l, mid);
+			mergeSort(mid + 1, r);
+			merge(l, mid, r);
 		}
 	}
 
-	private static void merge(int[] a, int l, int mid, int r) {
+	private static void merge(int l, int mid, int r) {
 		int i = l;
 		int j = mid + 1;
 		int k = l;
