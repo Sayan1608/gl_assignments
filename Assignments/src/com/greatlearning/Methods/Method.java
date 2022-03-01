@@ -5,12 +5,12 @@ public class Method {
 	private int num = 10;
 
 	public int performleftShift() {
-		return (num << 1);
+		return (num << 1);  // y = x * (2^n)
 	}
 
 	public int performRightShift(int val, int digitstoshift) {
 		this.num = val;
-		return (num >> digitstoshift);
+		return (num >> digitstoshift); // y = x/(2^n)  
 	}
 
 	public static void main(String[] args) {
