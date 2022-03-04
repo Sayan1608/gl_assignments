@@ -29,7 +29,7 @@ public class HashSetDemo {
 		System.out.println("Hash Set : " + set);
 		
 		set.add("Sayan"); // duplicates are not allowed in Set 
-		System.out.println("Hash Set : " + set); // ordering is not mainted in a HashSet
+		System.out.println("Hash Set : " + set); // ordering is not maintained in a HashSet
 
 	}
 
