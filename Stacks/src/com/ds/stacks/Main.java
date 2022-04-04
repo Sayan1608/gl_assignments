@@ -12,21 +12,31 @@ public class Main {
 //			System.out.println("Stack Overflow error.");
 //		}
 
-		st.push(10);
-		st.push(20);
 		st.push(30);
+		st.push(20);
+		st.push(10);
 		st.push(40);
+		
 
 		System.out.println("Stack Elements :");
 		st.printStack();
+		
+		System.out.println("Minimum : "+st.getMin());
 
 		System.out.println(st.pop() + " popped out.");
 		System.out.println("Stack Elements :");
 		st.printStack();
 		System.out.println(st.pop() + " popped out.");
+		System.out.println("Stack Elements :");
+		st.printStack();
 		System.out.println(st.pop() + " popped out.");
+		System.out.println("Stack Elements :");
+		st.printStack();
+		System.out.println("Minimum : "+st.getMin());
 		System.out.println(st.pop() + " popped out.");
-		System.out.println(st.pop() + " popped out.");
+		
+		System.out.println("Minimum : "+st.getMin());
+//		System.out.println(st.pop() + " popped out.");
 		
 		System.out.println("Stack Elements :");
 		st.printStack();

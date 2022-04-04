@@ -2,9 +2,10 @@ package com.ds.stacks;
 
 public class StackImplementation {
 
-	static final int SIZE = 1000;
-	int current_pointer;
-	int[] arr = new int[SIZE];
+	private static final int SIZE = 1000;
+	private int current_pointer;
+	private int[] arr = new int[SIZE];
+	private int min = Integer.MAX_VALUE;
 
 	public StackImplementation() {
 		current_pointer = -1;
@@ -16,6 +17,9 @@ public class StackImplementation {
 			return false;
 		} else {
 			arr[++current_pointer] = e;
+			if(e < min) {
+				min = e;
+			}
 			return true;
 		}
 
@@ -27,8 +31,16 @@ public class StackImplementation {
 			return -1;
 		} else {
 			int x = arr[current_pointer--];
+			
+			if(min == x && current_pointer >= 0) {
+				min = arr[current_pointer];
+			}
 			return x;
 		}
+	}
+	
+	public int getMin() {
+		return min;
 	}
 
 	public void printStack() {
