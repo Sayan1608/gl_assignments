@@ -7,35 +7,46 @@ public class PostfixEvaluator {
 	public static int evaluate(String postfix) {
 		Stack<Integer> opStack = new Stack<Integer>();
 
-		for (int i = 0; i < postfix.length(); i++) {
-			char ch = postfix.charAt(i);
+		try {
+			for (int i = 0; i < postfix.length(); i++) {
+				char ch = postfix.charAt(i);
 
-			if (Character.isLetterOrDigit(ch)) {
-				opStack.push(ch - '0');
-			} else {
-				int op2 = opStack.pop();
-				int op1 = opStack.pop();
+				if (Character.isLetterOrDigit(ch)) {
 
-				switch (ch) {
-				case '^':
-					opStack.push((int) Math.pow(op1, op2));
-					break;
-				case '/':
-					opStack.push(op1 / op2);
-					break;
-				case '*':
-					opStack.push(op1 * op2);
-					break;
-				case '-':
-					opStack.push(op1 - op2);
-					break;
-				case '+':
-					opStack.push(op1 + op2);
-					break;
+					if (Character.isDigit(ch)) {
+						opStack.push(ch - '0');
+					} else {
+						throw new IdentifierException("Invalid identifier " + ch);
+					}
+				} else {
+					int op2 = opStack.pop();
+					int op1 = opStack.pop();
+
+					switch (ch) {
+					case '^':
+						opStack.push((int) Math.pow(op1, op2));
+						break;
+					case '/':
+						opStack.push(op1 / op2);
+						break;
+					case '*':
+						opStack.push(op1 * op2);
+						break;
+					case '-':
+						opStack.push(op1 - op2);
+						break;
+					case '+':
+						opStack.push(op1 + op2);
+						break;
+					}
 				}
 			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
+
 		return opStack.pop();
+
 	}
 
 	public static void main(String[] args) {
