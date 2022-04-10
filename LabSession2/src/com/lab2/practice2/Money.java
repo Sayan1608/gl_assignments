@@ -8,7 +8,6 @@ public class Money {
 
 	public static void sort(int[] arr) {
 
-		int partition = 1;
 
 		for (int i = 1; i < arr.length; i++) {
 			int temp = arr[i];
@@ -19,7 +18,6 @@ public class Money {
 				j--;
 			}
 			arr[j + 1] = temp;
-//			partition++;
 		}
 	}
 
@@ -65,6 +63,8 @@ public class Money {
 			}
 		} catch (InvalidDenominatorException e) {
 			System.out.println(e.getMessage());
+		}finally {
+			in.close();
 		}
 
 	}

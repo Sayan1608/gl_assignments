@@ -42,5 +42,7 @@ public class PayMoney {
 			}
 			
 		}
+		
+		in.close();
 	}
 }
