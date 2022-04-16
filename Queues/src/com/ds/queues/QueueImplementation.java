@@ -3,13 +3,15 @@ package com.ds.queues;
 public class QueueImplementation {
 
 	private int maxsize;
-	private int front = -1;
-	private int rear = -1;
+	private int front;
+	private int rear;
 	private int[] arr;
 
 	public QueueImplementation(int maxsize) {
 		this.maxsize = maxsize;
 		arr = new int[this.maxsize];
+		front = -1;
+		rear = -1;
 	}
 
 	public boolean isEmpty() {
