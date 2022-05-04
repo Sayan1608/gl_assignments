@@ -136,7 +136,7 @@ public class AVLRotations {
 			value = arr[i];
 			System.out.println("\nInserting " + value + " to tree");
 			root = avl.insert(root, value);
-			// Print inorder traversal of the BST
+			// Print inorder traversal of the BSTig
 			System.out.println("\nInorder of Binary tree. '{}' contains height of node");
 			avl.Inorder(root);
 			System.out.println();
